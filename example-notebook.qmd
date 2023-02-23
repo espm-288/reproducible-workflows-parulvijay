@@ -6,6 +6,8 @@ editor: visual
 
 ## Quarto
 
+Testing
+
 Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
 
 ## Running Code
@@ -13,6 +15,13 @@ Quarto enables you to weave together content and executable code into a finished
 When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
 
 ```{r}
+
+#dont start scripts like - make new projects
+#rm(list = ls())  - doesnt remove packages and environmental variables
+#setwd() - directory name is not reproducible. 
+
+#Project - allows you to not setwd
+
 1 + 1
 ```
 
@@ -27,6 +36,7 @@ The `echo: false` option disables the printing of code (only output is displayed
 
 ```{r}
 library(tidyverse)
+library(ggplot2)
 
 mtcars |> ggplot(aes(cyl, mpg)) + geom_point()
 ```
